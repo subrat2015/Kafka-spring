@@ -1,5 +1,6 @@
 
 To create spring boot project, go to spring initializer website: https://start.spring.io/
+
 Spring-kafka : https://docs.spring.io/spring-kafka/reference/html/
 
 List the kafka topics:
