@@ -56,7 +56,7 @@ public class LibraryEventsControllerIntegrationTest {
         //given
         Book book = Book.builder()
                 .bookId(123)
-                .bookAuthor("Dilip")
+                .bookAuthor("Subrat")
                 .bookName("Kafka using Spring Boot")
                 .build();
 
@@ -76,7 +76,7 @@ public class LibraryEventsControllerIntegrationTest {
 
         ConsumerRecord<Integer, String> consumerRecord = KafkaTestUtils.getSingleRecord(consumer, "library-events");
         //Thread.sleep(3000);
-        String expectedRecord = "{\"libraryEventId\":null,\"libraryEventType\":\"NEW\",\"book\":{\"bookId\":123,\"bookName\":\"Kafka using Spring Boot\",\"bookAuthor\":\"Dilip\"}}";
+        String expectedRecord = "{\"libraryEventId\":null,\"libraryEventType\":\"NEW\",\"book\":{\"bookId\":123,\"bookName\":\"Kafka using Spring Boot\",\"bookAuthor\":\"Subrat\"}}";
         String value = consumerRecord.value();
         assertEquals(expectedRecord, value);
 
@@ -88,7 +88,7 @@ public class LibraryEventsControllerIntegrationTest {
         //given
         Book book = Book.builder()
                 .bookId(456)
-                .bookAuthor("Dilip")
+                .bookAuthor("Subrat")
                 .bookName("Kafka using Spring Boot")
                 .build();
 
@@ -108,7 +108,7 @@ public class LibraryEventsControllerIntegrationTest {
 
         ConsumerRecord<Integer, String> consumerRecord = KafkaTestUtils.getSingleRecord(consumer, "library-events");
         //Thread.sleep(3000);
-        String expectedRecord = "{\"libraryEventId\":123,\"libraryEventType\":\"UPDATE\",\"book\":{\"bookId\":456,\"bookName\":\"Kafka using Spring Boot\",\"bookAuthor\":\"Dilip\"}}";
+        String expectedRecord = "{\"libraryEventId\":123,\"libraryEventType\":\"UPDATE\",\"book\":{\"bookId\":456,\"bookName\":\"Kafka using Spring Boot\",\"bookAuthor\":\"Subrat\"}}";
         String value = consumerRecord.value();
         assertEquals(expectedRecord, value);
 

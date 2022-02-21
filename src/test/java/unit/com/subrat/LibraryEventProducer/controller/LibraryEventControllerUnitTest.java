@@ -37,7 +37,7 @@ public class LibraryEventControllerUnitTest {
         //given
         Book book = Book.builder()
                 .bookId(123)
-                .bookAuthor("Dilip")
+                .bookAuthor("Subrat")
                 .bookName("Kafka using Spring Boot")
                 .build();
 
