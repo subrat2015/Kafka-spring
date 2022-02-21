@@ -90,7 +90,7 @@ public class LibraryEventControllerUnitTest {
         //given
         Book book = Book.builder()
                 .bookId(123)
-                .bookAuthor("Dilip")
+                .bookAuthor("Subrat")
                 .bookName("Kafka Using Spring Boot")
                 .build();
         LibraryEvent libraryEvent = LibraryEvent.builder()
@@ -113,7 +113,7 @@ public class LibraryEventControllerUnitTest {
         //given
         Book book = Book.builder()
                 .bookId(123)
-                .bookAuthor("Dilip")
+                .bookAuthor("Subrat")
                 .bookName("Kafka Using Spring Boot")
                 .build();
         LibraryEvent libraryEvent = LibraryEvent.builder()
